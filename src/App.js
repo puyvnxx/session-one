@@ -1,22 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import MyButton from './componets/MyButton';
+import Navbar from './componets/Navbar';
+import Footer from './componets/Footer'
 
-function App() {
+
+
+
+const App = () => {
+  const navHeading = "Navigation Bar";
+  const navText = "Sosmed";
+
+  const clicked = () => {
+    return alert("button di pencet");
+  }
+
+  const paragraf = () =>{
+    return (
+      <div>
+      <h3>mantap bang</h3>
+      <i>horee</i>
+      <marquee>Top Markotop</marquee>
+      </div>
+    )
+  };
+
+
   return (
     <div className="App">
       <header className="App-header">
+        <Navbar navText={navText} navHeading={navHeading}/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello Broo
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <MyButton clicked={clicked}/>
+        <Footer paragraf={paragraf}/>
       </header>
     </div>
   );
